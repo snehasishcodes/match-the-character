@@ -20,7 +20,7 @@ export default function Home() {
 
 	async function start() {
 		if (isCorrect === true) return;
-		const data = await fetchCharacters();
+		const data = await fetchCharacters("difficult");
 		setCharacters(data.characters);
 		setAnimes(data.animes);
 		setCharacter(data.characters[Math.floor(Math.random() * data.characters.length)]);
